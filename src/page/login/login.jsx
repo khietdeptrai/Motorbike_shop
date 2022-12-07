@@ -63,7 +63,13 @@ const Login = () => {
         <Form>
           <Input placeholder="username" />
           <Input placeholder="password" />
-          <Button>LOGIN</Button>
+          {/* <Button>LOGIN</Button> */}
+
+          <Link to="/login">
+            <Button type="button">
+              <p>LOGIN</p>
+            </Button>
+          </Link>
           <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
           <Link>CREATE A NEW ACCOUNT</Link>
         </Form>
