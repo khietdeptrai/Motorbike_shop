@@ -1,8 +1,8 @@
 
-import './Cuahang.scss'
+import './Shopping.scss'
 function Cuahang() {
     return (
-        <div className="cuahang">
+        <div className="shopping">
             <ul className='list'>
                 <li className='item'>
                     <div className='img-box'>
