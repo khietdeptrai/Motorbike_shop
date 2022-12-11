@@ -1,0 +1,27 @@
+.cuahang {
+    min-height: 85vh;
+    .list {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 20%;
+        .item {
+            box-shadow: 0 0 15px #ccc;
+            width: 200px;
+            margin: 32px;
+            .img-box {
+                height: 100px;
+                height: 200px;
+                .img {
+                    width: 200px;
+
+                }
+            }
+        }
+        .item:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+    }
+}
