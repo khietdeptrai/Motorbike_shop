@@ -23,6 +23,7 @@
                 display: block;
                 margin: 0 12px;
                 font-weight: 500;
+                text-decoration: none;
                 color: black;
 
             }
@@ -37,6 +38,7 @@
         display: flex;
         align-items: center;
         flex: 1;
+
         .fa-search{
             margin: 0 16px;
             font-size: 22px;
@@ -55,6 +57,7 @@
             border-radius: 16px;
             padding: 6px;
             color: #33cc66;
+            text-decoration: none;
             position: relative;
             .fa-shopping-bag {
                 margin-left: 8px;

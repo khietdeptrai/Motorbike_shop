@@ -1,77 +1,26 @@
-import styled from "styled-components";
+import './Register.scss'
 
-const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://anhdep123.com/wp-content/uploads/2020/11/hinh-nen-full-hd-2k-xe-pkl.jpg")
-      center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const Wrapper = styled.div`
-  width: 40%;
-  padding: 20px;
-  background-color: white;
-`;
-
-const Title = styled.h1`
-  font-size: 24px;
-  font-weight: 300;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const Input = styled.input`
-  flex: 1;
-  min-width: 40%;
-  margin: 20px 10px 0px 0px;
-  padding: 10px;
-`;
-
-const Agreement = styled.span`
-  font-size: 12px;
-  margin: 20px 0px;
-`;
-
-const Button = styled.button`
-  width: 40%;
-  border: none;
-  padding: 15px 20px;
-  background-color: teal;
-  color: white;
-  cursor: pointer;
-`;
 
 const Register = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Title><b>CREATE AN ACCOUNT</b></Title>
-        <Form>
-          <Input placeholder="name" />
-          <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirm password" />
-          <Agreement>
+    <div className="container">
+      <div className="wrapper">
+        <h1 className="title"><b>CREATE AN ACCOUNT</b></h1>
+        <form className="form">
+          <input className="input" placeholder="name" />
+          <input className="input" placeholder="last name" />
+          <input className="input" placeholder="username" />
+          <input className="input" placeholder="email" />
+          <input className="input" placeholder="password" />
+          <input className="input" placeholder="confirm password" />
+          <span className="Agreement">
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
-          </Agreement>
-          <Button>CREATE</Button>
-        </Form>
-      </Wrapper>
-    </Container>
+          </span>
+          <button className="button">CREATE</button>
+        </form>
+      </div>
+    </div>
   );
 };
 
