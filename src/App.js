@@ -1,10 +1,11 @@
 import './App.css';
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Header, Home, Footer } from "./components/index"
 import Register from './page/register/register';
 import Login from './page/login/login';
 import Shopping from './page/shopping/shopping'
-import Cart from './page/cart/cart';
+
 //App
 function App() {
   return (
@@ -24,4 +25,4 @@ function App() {
   );
 };
 
-export default App;
+export default Item
