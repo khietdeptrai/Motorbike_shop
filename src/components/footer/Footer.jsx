@@ -14,8 +14,7 @@ function Footer() {
         </div>
         <div className='footer__diachi'>
         <h3 className='footer__diachi-title'>Địa chỉ</h3>
-        <p className='footer__diachi-text'>9999 Nguyễn Huệ, Quận 1, TP. HCM
-Việt Nam</p>
+        <p className='footer__diachi-text'>9999 Nguyễn Huệ, Quận 1, TP. HCM Việt Nam</p>
 
         </div>
         <div className='footer__ketnoi'>
