@@ -1,58 +1,28 @@
 
-import './Shopping.scss'
-function Cuahang() {
+import React,{useState, useEffect} from "react";
+import "./Shopping.scss"
+import Item from '../../components/item/Item';
+import axios from "axios";
+function Shopping() {
+    const [products, setProducts]=useState([])
+    useEffect(()=>{
+        axios.get('https://motorshop-85ou.onrender.com/api/products')
+        .then((res)=>{
+            setProducts(res.data.products)
+        })
+    },[])
     return (
         <div className="shopping">
             <ul className='list'>
-                <li className='item'>
-                    <div className='img-box'>
-                        <img className='img' src='https://i.pinimg.com/564x/ab/f6/93/abf6931a2219d89bce1a5ee9fb1d6daa.jpg' alt='img item' />
+                {products.map(product=>(
+                    <div key={product.id}>
+                        <li className='item'>       
+                            <Item title={product.title} price={product.price} img={product.img} color={product.color} desc={product.desc} categories={product.categories} />
+                        </li>
                     </div>
-                    <div className='content'>
-                        <p className='name'>Name</p>
-                        <p className='price'>1000k</p>
-                        <p className='numberSale'>10 chiec</p>
-                        <button>buy now</button>
-                    </div>
-                </li>
-                <li className='item'>
-                    <div className='img-box'>
-                        <img className='img' src='https://i.pinimg.com/564x/ab/f6/93/abf6931a2219d89bce1a5ee9fb1d6daa.jpg' alt='img item' />
-                    </div>
-                    <div className='content'>
-                        <p className='name'>Name</p>
-                        <p className='price'>1000k</p>
-                        <p className='numberSale'>10 chiec</p>
-                        <button>buy now</button>
-                    </div>
-                </li>
-                <li className='item'>
-                    <div className='img-box'>
-                        <img className='img' src='https://i.pinimg.com/564x/ab/f6/93/abf6931a2219d89bce1a5ee9fb1d6daa.jpg' alt='img item' />
-                    </div>
-                    <div className='content'>
-                        <p className='name'>Name</p>
-                        <p className='price'>1000k</p>
-                        <p className='numberSale'>10 chiec</p>
-                        <button>buy now</button>
-                    </div>
-                </li>
-                <li className='item'>
-                    <div className='img-box'>
-                        <img className='img' src='https://i.pinimg.com/564x/ab/f6/93/abf6931a2219d89bce1a5ee9fb1d6daa.jpg' alt='img item' />
-                    </div>
-                    <div className='content'>
-                        <p className='name'>Name</p>
-                        <p className='price'>1000k</p>
-                        <p className='numberSale'>10 chiec</p>
-                        <button>buy now</button>
-                    </div>
-                </li>
-                
-               
+                ))} 
             </ul>
         </div>
-
-    );
+        );
 }
-export default Cuahang;
+export default Shopping;

@@ -6,7 +6,7 @@ import './Login.scss'
 const Login = () => {
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
-
+//link to backend
   // fetch('https:localhost//3000/get')
   // .then(res => res.json())
   // .then(res => {
