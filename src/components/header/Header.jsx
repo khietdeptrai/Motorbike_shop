@@ -11,10 +11,10 @@ function Header() {
         </div>
         <div className="header__mid">
             <ul className="header__mid-list">
-               <li className="header__mid-list__item"> <Link className="header__mid-list__item-link" to='/homepage'>Trang chủ</Link></li>
-               <li className="header__mid-list__item"> <Link className="header__mid-list__item-link" to='/introduction'>Giới thiệu</Link></li>
-               <li className="header__mid-list__item"> <Link className="header__mid-list__item-link" to='/shopping'>Cửa hàng</Link></li>
-               <li className="header__mid-list__item"> <Link className="header__mid-list__item-link" to='/contact'>Liên hệ</Link></li>
+              <Link className="header__mid-lis__item" to='/homepage'> <li className="header__mid-lis__item">Trang chủ</li></Link> 
+              <Link className="header__mid-lis__item" to='/introduction'>  <li className="header__mid-lis__item">Giới thiệu</li></Link> 
+              <Link className="header__mid-lis__item" to='/shopping'> <li className="header__mid-lis__item">Cửa hàng</li></Link> 
+              <li className="header__mid-lis__item">Liên hệ</li>
             </ul>
         </div>
         <div className="header__right">
