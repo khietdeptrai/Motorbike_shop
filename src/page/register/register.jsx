@@ -2,6 +2,8 @@ import './Register.scss'
 
 
 const Register = () => {
+
+  
   return (
     <div className="container">
       <div className="wrapper">
