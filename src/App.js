@@ -21,8 +21,7 @@ function App() {
       </Routes>
       <Footer />
     </>
-
   );
 };
 
-export default Item
+export default App;
