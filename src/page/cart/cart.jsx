@@ -1,36 +1,56 @@
 import { Add, Remove } from "@material-ui/icons";
 import {Link} from 'react-router-dom'
-
+import { useState } from "react";
 import './Cart.scss'
 
-
+const data ={
+  price: 254490000,
+  name: "Honda CBR650R 2023",
+  img: "https://xe360.com/uploads/forum/photo/ru/rul/rul3wx2liwmn.jpg"
+};
 const Cart = () => {
+  
+  const [numberItem, setNumberItem] = useState(0)
+  const handdleRemoveNumberItem = () => {
+    if(numberItem < 1)
+    {
+      setNumberItem(0)
+    }
+    else {
+      setNumberItem(numberItem - 1)
+    }
+
+  }
+  const handdleAddNumberItem = () => {
+    setNumberItem(numberItem + 1)
+  }
+
   return (
     <div className="Container">
 
       <div className="Wrapper">
         <h1 className="Title">YOUR BAG</h1>
         <div className="Top">
-          <Link to ='/homepage'><button className="TopButton">CONTINUE SHOPPING</button></Link>
+          <Link to ='/shopping'><button className="TopButton-left">CONTINUE SHOPPING</button></Link>
           <div className="TopTexts">
-            <div className="TopTexts">Shopping Bag(2)</div>
-            <div className="TopTexts">Your Wishlist (0)</div>
+            <div className="TopTexts-item">Shopping Bag(2)</div>
+            <div className="TopTexts-item">Your Wishlist (0)</div>
           </div>
-          <button className="TopButton" type="filled">CHECKOUT NOW</button>
+          <button className="TopButton-right" type="filled">CHECKOUT NOW</button>
         </div>
         <div className="Bottom">
-          <div className="Info">
-            <div className="Product">
+          <ul className="Info">
+            <li className="Product">
               <div className="ProductDetail">
-                <image src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1614188818-TD1MTHU_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHERS_THUNDER_b01b1013-cd8d-48e7-bed9-52db26515dc4.png?crop=1xw:1.00xh;center,top&resize=480%3A%2A" />
+                <img className="ProductDetail-img" src={data.img} alt="Img Product"/>
                 <div className="Details">
                   <span className="ProductName">
-                    <b>Product:</b> JESSIE THUNDER SHOES
+                    <b>Product:</b> {data.name}
                   </span>
                   <span className="ProductId">
                     <b>ID:</b> 93813718293
                   </span>
-                  <div className="ProductColor" color="black" />
+                  <div className="box-color black"></div>
                   <span className="ProductSize">
                     <b>Size:</b> 37.5
                   </span>
@@ -38,40 +58,21 @@ const Cart = () => {
               </div>
               <div className="PriceDetail">
                 <div className="ProductAmountContainer">
-                  <Add />
-                  <div className="ProductAmount">2</div>
+                <button className="removeproduct btn" onClick={handdleRemoveNumberItem}>
                   <Remove />
-                </div>
-                <div className="ProductPrice">$ 30</div>
-              </div>
-            </div>
-            <hr className="Hr" />
-            <div className="Product">
-              <div className="ProductDetail">
-                <image src="https://i.pinimg.com/originals/2d/af/f8/2daff8e0823e51dd752704a47d5b795c.png" />
-                <div className="Details">
-                  <span className="ProductName">
-                    <b>Product:</b> HAKURA T-SHIRT
-                  </span>
-                  <span className="ProductId">
-                    <b>ID:</b> 93813718293
-                  </span>
-                  <div className="ProductColor" color="gray" />
-                  <span className="ProductSize">
-                    <b>Size:</b> M
-                  </span>
-                </div>
-              </div>
-              <div className="PriceDetai"l>
-                <div className="ProductAmountContainer">
+                  </button>
+                  <span className="ProductAmount ">{numberItem}</span>
+
+                  <button className="addproduct btn" onClick={handdleAddNumberItem}>
                   <Add />
-                  <div className="ProductAmount">1</div>
-                  <Remove />
+                  </button>
+                 
                 </div>
-                <div className="ProductPrice">$ 20</div>
+                <div className="ProductPrice">$ {data.price}</div>
               </div>
-            </div>
-          </div>
+            </li>
+            
+          </ul>
           <div className="Summary">
             <h1 className="SummaryTitle">ORDER SUMMARY</h1>
             <div className="SummaryItem">
@@ -87,8 +88,8 @@ const Cart = () => {
               <span className="SummaryItemPrice">$ -5.90</span>
             </div>
             <div className="SummaryItem" type="total">
-              <span className="SummaryItemText">Total</span>
-              <span className="SummaryItemPrice">$ 80</span>
+              <strong className="SummaryItemText">Total</strong>
+              <strong className="SummaryItemPrice">$ {numberItem * data.price}</strong>
             </div>
             <button className="Button">CHECKOUT NOW</button>
           </div>
