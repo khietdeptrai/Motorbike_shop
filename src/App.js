@@ -6,7 +6,7 @@ import Login from './page/login/login';
 import Shopping from './page/shopping/shopping';
 import Cart from './page/cart/cart';
 
-//App
+//App ===
 function App() {
   return (
     <>
