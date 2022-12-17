@@ -2,8 +2,10 @@ import Logo from "./logo.svg";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 function Header() {
+  
   const isUser = true;
   const isAdmin = true;
+
   return (
     <div className="header">
       <div className="header__left">
@@ -21,7 +23,7 @@ function Header() {
           </li>
           <li className="header__mid-list__item">
             {" "}
-            <Link className="header__mid-list__item-link" to="/introduction">
+            <Link className="header__mid-list__item-link" to="/about">
               Giới thiệu
             </Link>
           </li>
