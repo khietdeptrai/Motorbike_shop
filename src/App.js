@@ -15,9 +15,7 @@ import {
 
 import { useState } from "react";
 //App 
-//
 function App() {
-  const [user, setUser] = useState();
   return (
     <>
       <Header />
@@ -32,6 +30,7 @@ function App() {
         <Route path="/quanlykhachhang" element={<Quanlykhachhang />} />
         <Route path="/quanlysanpham" element={<Quanlysanpham />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
