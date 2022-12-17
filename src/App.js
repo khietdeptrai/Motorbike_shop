@@ -13,9 +13,11 @@ import {
   Contact,
 } from "./page/index";
 
+import { useState } from "react";
 //App 
 //
 function App() {
+  const [user, setUser] = useState();
   return (
     <>
       <Header />
