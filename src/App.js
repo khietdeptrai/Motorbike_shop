@@ -6,7 +6,6 @@ import {
   Register,
   Login,
   Shopping,
-  Cart,
   Thongtincanhan,
   Quanlykhachhang,
   Quanlysanpham,
@@ -24,7 +23,6 @@ function App() {
         <Route path="homepage" element={<Home />}></Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<Cart />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/thongtincanhan" element={<Thongtincanhan />} />
         <Route path="/quanlykhachhang" element={<Quanlykhachhang />} />
