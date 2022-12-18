@@ -1,4 +1,4 @@
-import Logo from "./logo.svg";
+import Logo from "./logo192.svg";
 import { Link } from "react-router-dom";
 import "./Header.scss";
 function Header() {
