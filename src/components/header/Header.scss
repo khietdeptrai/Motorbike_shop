@@ -11,7 +11,7 @@
         flex: 1;
 
         .header__left-logo {
-            height: 60px;
+            height: 100px;
         }
     }
     .header__mid {
@@ -127,6 +127,7 @@
             border-radius: 16px;
             padding: 6px;
             color: white;
+
             position: relative;
             .fa-shopping-bag {
                 margin-left: 8px;

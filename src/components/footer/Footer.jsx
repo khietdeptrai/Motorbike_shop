@@ -1,11 +1,11 @@
 
 import './Footer.scss'
-import Logo from "./logo.svg";
+import Logo from "./logo512.svg";
 function Footer() {
     return ( <div className="footer" >
         <div className='footer__logo'>
             <img src={Logo} alt="logo" className='footer__logo-img' />
-            <p className='footer__logo-text'>Món quà đặc biệt từ mẹ thiên nhiên.</p>
+            {/* <p className='footer__logo-text'>Món quà đặc biệt từ mẹ thiên nhiên.</p> */}
         </div>
         <div className='footer__lienhe'>
             <h3 className='footer__lienhe-title'>Liên hệ</h3>

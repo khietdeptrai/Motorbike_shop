@@ -13,19 +13,22 @@ const Login = () => {
   //   console.log(res)
   // })
   return (
-    <div className="container">
-      <div className="wrapper">
-        <h1 className="title"><b>SIGN IN</b></h1>
-        <form className="form">
-          <input className="input" placeholder="username" />
-          <input className="input" placeholder="password" />
-          <button className="button">LOGIN</button>
 
-          <Link className="link">DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link className="link" to='/register'>CREATE A NEW ACCOUNT</Link>
-        </form>
+   <div className="login">
+      <div className="container">
+        <div className="wrapper">
+          <h1 className="title"><b>SIGN IN</b></h1>
+          <form className="form">
+            <input className="input" placeholder="username" />
+            <input className="input" placeholder="password" />
+            <button className="button">LOGIN</button>
+  
+            <Link className="link">DO NOT YOU REMEMBER THE PASSWORD?</Link>
+            <Link className="link" to='/register'>CREATE A NEW ACCOUNT</Link>
+          </form>
+        </div>
       </div>
-    </div>
+   </div >
   );
 };
 
