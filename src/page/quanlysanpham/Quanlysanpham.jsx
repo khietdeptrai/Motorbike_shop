@@ -6,6 +6,8 @@ import {
   useParams,
   useLocation,
 } from "react-router-dom";
+
+
 import { useForm } from "react-hook-form";
 import productservice from "../../service/product.service";
 import ModalUser from "./addnew";
@@ -17,6 +19,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
 import _ from "lodash";
+import "./Quanlysanpham.scss"
 
 const style = {
   position: "absolute",
@@ -155,7 +158,7 @@ function Quanlysanpham() {
   return (
     <body>
     <div className="mx-1 mt-5">
-      <button className="btn btn-primary " onClick={handleOpen1}>
+      <button className="btn btn-primary manage-product--addnew" onClick={handleOpen1}>
         Add new product
       </button>
     </div>
@@ -261,12 +264,12 @@ function Quanlysanpham() {
         </Modal>
       </div>
       <table id="customers">
-        <tr>
-          <th class="h-10 w-10">Product</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Description</th>
-          <th>action</th>
+        <tr className="manage-header--title">
+          <th className="h-10 w-10 manage-header--title-item">Product</th>
+          <th className="manage-header--title-item">Name</th>
+          <th className="manage-header--title-item">Price</th>
+          <th className="manage-header--title-item">Description</th>
+          <th className="manage-header--title-item">Action</th>
         </tr>
         {data.products &&
           data.products.map((product) => {
@@ -274,18 +277,19 @@ function Quanlysanpham() {
               <tr key={product.id}>
                 <td>
                   {" "}
-                  <img src={product.img} />
+                  <img className="manage-product--img-product" src={product.img} />
                 </td>
                 <td>{product.title}</td>
                 <td>{product.price}</td>
                 <td>{product.desc}</td>
                 <td>
-                  <a
-                    className="btn btn-danger m-2"
+                  <div className="management-product--actions-box">
+                  <button 
+                    className="btn btn-danger m-2 management-product--btn-edit"
                     onClick={() => handleOpen(product)}
                   >
                     Edit
-                  </a>
+                  </button>
                   <Modal
                     open={open}
                     onClose={handleClose}
@@ -421,15 +425,15 @@ function Quanlysanpham() {
                       </div>
                     </form>
                   </Modal>
-
-                  <a
+                  <button
                     onClick={() => {
                       Removefunction(product.id);
                     }}
-                    className="btn btn-danger"
+                    className="btn btn-danger management-product--btn-delete"
                   >
                     Delete
-                  </a>
+                  </button>
+                  </div>
                 </td>
               </tr>
             );

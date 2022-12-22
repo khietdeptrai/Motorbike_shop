@@ -18,7 +18,9 @@ function Shopping() {
 
 
   const handleAddtocart= (ID) => {
-    console.log(ID);
+    if(localStorage.getItem("productID"))
+      localStorage.removeItem("productID")
+    localStorage.setItem("productID", ID)
   }
   return (
     <div className="shopping">
