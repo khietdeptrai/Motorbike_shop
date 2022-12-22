@@ -2,15 +2,26 @@ import React, { useState, useEffect } from "react";
 import "./Shopping.scss";
 import axios from "axios";
 function Shopping() {
-    const [products, setProducts] = useState([]);
+
+
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
       .get("https://motorshop-85ou.onrender.com/api/products")
       .then((res) => {
         setProducts(res.data.products);
-        console.log(products);
+        console.log(res.data.products);
+
       });
   }, []);
+
+
+
+  const handleAddtocart= (ID) => {
+    if(localStorage.getItem("productID"))
+      localStorage.removeItem("productID")
+    localStorage.setItem("productID", ID)
+  }
   return (
     <div className="shopping">
       <ul className="list">
@@ -27,26 +38,13 @@ function Shopping() {
                 <div className="color-list">
                     <div className="item red active"></div>
                     <div className="item yellow"></div>
-                    <div className="item blue"></div>
-                    <div className="item pink"></div>
-
                 </div>
-                <di className="more">
-                    <div className="rating">
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>
-                    </div>
-                    <div className="like">
-                    <i class="fa fa-heart"></i>
-                    </div>
-                    </di >
+
                 <p className="price">{product.price} VND</p>
                 <div className="actions">
-                <button className="btn btn-add">Add to cart</button>
-                <button className="btn btn-view">View detail</button>
+                </div>
+                <div className="actions">
+                 <button className="btn btn-add" onClick={() => handleAddtocart(product.id)}>Add to cart</button>
                 </div>
               </div>
             </li>

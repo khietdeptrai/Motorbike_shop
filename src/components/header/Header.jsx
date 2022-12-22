@@ -1,10 +1,45 @@
-import Logo from "./logo.svg";
-import { Link } from "react-router-dom";
+import Logo from "./logo192.svg";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import authService from "../../service/user.service";
+import eventBus from "../../common/EventBus";
+
+
 import "./Header.scss";
+
 function Header() {
   
-  const isUser = true;
-  const isAdmin = true;
+  const [isUser, setIsUser] = useState(undefined);
+  const [isAdmin, setIsAdmin]= useState(false)
+
+  useEffect(()=>{
+    const user = authService.getCurrentUser()
+    
+    if (user){
+      setIsUser(user)
+      if(user.roles[1]==='ROLE_ADMIN')
+      {
+        setIsAdmin(true)
+      }
+    }
+    
+    eventBus.on("logout", () => {
+      logOut();
+    });
+    return () => {
+      eventBus.remove("logout");
+    };
+    
+  },[]);
+
+  let navigate=useNavigate()
+    const logOut = () => {
+      authService.logout();
+      setIsUser(undefined);
+      navigate("/login")
+        window.location.reload();
+    };
+
 
   return (
     <div className="header">
@@ -56,7 +91,7 @@ function Header() {
               </> : <></>}
               
               <li className="user-list--item"><Link className="item-link">Cài đặt</Link></li>
-              <li className="user-list--item"><Link className="item-link" to="/login">Đăng xuất</Link></li>
+              <li className="user-list--item"><Link className="item-link" onClick={logOut}>Đăng xuất</Link></li>
             </ul>
           </div>
         ) : (
