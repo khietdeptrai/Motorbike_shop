@@ -18,13 +18,7 @@ function Shopping() {
 
 
   const handleAddtocart= (ID) => {
-<<<<<<< duc2
-    if(localStorage.getItem("productID"))
-      localStorage.removeItem("productID")
-    localStorage.setItem("productID", ID)
-
     console.log(ID);
-
   }
   return (
     <div className="shopping">
