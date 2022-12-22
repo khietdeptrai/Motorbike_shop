@@ -13,9 +13,12 @@ import {
 } from "./page/index";
 import Cart from "./page/cart/Cart"
 import { useState } from "react";
+
 //App 
 function App() {
   return (
+
+
     <>
       <Header />
       <Routes>

@@ -21,8 +21,6 @@ import Box from "@mui/material/Box";
 import _ from "lodash";
 import "./Quanlysanpham.scss"
 
-
-
 const style = {
   position: "absolute",
   top: "50%",
