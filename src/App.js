@@ -9,9 +9,9 @@ import {
   Thongtincanhan,
   Quanlykhachhang,
   Quanlysanpham,
-  Contact,
+  Contact
 } from "./page/index";
-
+import Cart from "./page/cart/Cart"
 import { useState } from "react";
 //App 
 function App() {
@@ -29,7 +29,8 @@ function App() {
         <Route path="/quanlysanpham" element={<Quanlysanpham />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+
       </Routes>
       <Footer />
     </>

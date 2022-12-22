@@ -17,7 +17,7 @@ function Header() {
     
     if (user){
       setIsUser(user)
-      if(user.roles[0]==='ROLE_ADMIN')
+      if(user.roles[1]==='ROLE_ADMIN')
       {
         setIsAdmin(true)
       }
