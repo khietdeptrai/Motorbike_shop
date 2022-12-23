@@ -1,5 +1,3 @@
-
-
 import "./About.scss"
 
 function About() {
@@ -35,9 +33,6 @@ function About() {
                     <p className="role">Finance Manager </p>
                     <p className="desc">Nhanh, nhanh hơn, nhanh hơn nữa.</p>
                 </li>
-                
-         
-
             </ul>
         </div>
     </div> );

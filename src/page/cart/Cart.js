@@ -1,7 +1,9 @@
 import React from 'react'
-import {AiFillCloseCircle} from "react-icons/ai"
-import {RiDeleteBin6Line } from "react-icons/ri"
 import { useCart } from 'react-use-cart'
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, useHistory,useNavigate  } from "react-router-dom";
+
+import "../../style/Cart.css"
 
 function Cart() {
 	const {	isEmpty,
@@ -69,10 +71,10 @@ function Cart() {
         <br/>
         <br/>
         <div className="col-auto ms-auto">
-          <h3>Total Price: $ {cartTotal}</h3>
+          <h3>Total Price: VND {cartTotal}</h3>
         </div>
         <div className="col-auto ms-auto">
-          <button className="clear-btn btn btn-warning m-2" onClick={() => emptyCart()}>Clear Cart</button>
+          <button className="clear-btn btn btn-warning m-4  w-40" onClick={() => emptyCart()}>Clear Cart</button>
           <button className="checkout-btn btn btn-primary m-2">Check Out</button>
         </div>
       </div>
