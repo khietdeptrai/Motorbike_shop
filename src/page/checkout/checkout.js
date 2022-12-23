@@ -18,7 +18,7 @@ import authService from "../../service/user.service";
 import _ from "lodash";
 
 
-//Chua hien trang Checkout
+//check out chua hien trang
 const style = {
   position: "absolute",
   top: "50%",
