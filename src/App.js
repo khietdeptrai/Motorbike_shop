@@ -15,6 +15,9 @@ import Cart from "./page/cart/Cart"
 import { useState } from "react";
 import { CartProvider, useCart } from "react-use-cart";
 
+import { CartProvider, useCart } from "react-use-cart";
+
+
 //App 
 function App() {
   return (

@@ -32,6 +32,14 @@ function About() {
                     <h2 className="name">Lê Ngọc Thái Phương</h2>
                     <p className="role">Finance Manager </p>
                     <p className="desc">Nhanh, nhanh hơn, nhanh hơn nữa.</p>
+
+                </li>
+                <li className="item">
+                    <img className="avatar" src="https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/314762531_926959768269534_8723370559386502290_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NlUeLPTIMUAAX_LRylS&_nc_ht=scontent.fsgn4-1.fna&oh=00_AfAVcnQrzQCoiTbvS3SwX8k06x91qpLKuUaCl1o0ECDPHA&oe=63AA9BF3" alt="Avatar"/>
+                    <h2 className="name">Ngô Đắc Lợi</h2>
+                    <p className="role">Finance Manager </p>
+                    <p className="desc">Nhanh, nhanh hơn, nhanh hơn nữa.</p>
+
                 </li>
             </ul>
         </div>
