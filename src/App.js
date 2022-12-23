@@ -14,12 +14,16 @@ import {
 import Cart from "./page/cart/Cart"
 import { useState } from "react";
 
+import { CartProvider, useCart } from "react-use-cart";
+
+
 //App 
 function App() {
   return (
 
 
     <>
+     <CartProvider>
       <Header />
       <Routes>
         <Route path="/" element={<Navigate replace to="/homepage" />} />
@@ -36,6 +40,8 @@ function App() {
 
       </Routes>
       <Footer />
+      </CartProvider>
+
     </>
   );
 }

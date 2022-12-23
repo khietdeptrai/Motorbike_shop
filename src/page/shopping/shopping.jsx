@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Shopping.scss";
 import axios from "axios";
+import { useCart } from "react-use-cart";
+
 function Shopping() {
 
-
+  const { addItem } = useCart();
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
@@ -44,7 +46,7 @@ function Shopping() {
                 <div className="actions">
                 </div>
                 <div className="actions">
-                 <button className="btn btn-add" onClick={() => handleAddtocart(product.id)}>Add to cart</button>
+                 <button className="btn btn-add" onClick={()=>{addItem(product)}}>Add to cart</button>
                 </div>
               </div>
             </li>
