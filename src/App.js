@@ -9,9 +9,10 @@ import {
   Thongtincanhan,
   Quanlykhachhang,
   Quanlysanpham,
-  Contact
+  Contact,
+  Checkout,
+  Cart
 } from "./page/index";
-import Cart from "./page/cart/Cart"
 import { useState } from "react";
 import { CartProvider, useCart } from "react-use-cart";
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
 
       </Routes>
       <Footer />

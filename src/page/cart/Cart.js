@@ -1,12 +1,16 @@
 import React from 'react'
 import { useCart } from 'react-use-cart'
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link, useHistory,useNavigate  } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 
 import "../../style/Cart.css"
 
 function Cart() {
-	const {	isEmpty,
+
+  let Navigate = useNavigate();
+
+	const {	
+      isEmpty,
 			totalUniqueItems,
 			items,
 			totalItems,
@@ -14,6 +18,10 @@ function Cart() {
 			updateItemQuantity,
 			removeItem,
 			emptyCart} = useCart();
+
+      const tocheckout =() => 
+      { Navigate("/checkout")}
+
 	if (isEmpty) return <h5 className="text-center" >Cart is Empty </h5>
   return (
     <>
@@ -75,7 +83,7 @@ function Cart() {
         </div>
         <div className="col-auto ms-auto">
           <button className="clear-btn btn btn-warning m-4  w-40" onClick={() => emptyCart()}>Clear Cart</button>
-          <button className="checkout-btn btn btn-primary m-2">Check Out</button>
+          <button className="checkout-btn btn btn-primary m-2" onClick={() => tocheckout()}>Check Out</button>
         </div>
       </div>
     </section>
