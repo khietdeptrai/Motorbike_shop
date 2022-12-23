@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCart } from 'react-use-cart'
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useHistory,useNavigate  } from "react-router-dom";
 
 import "../../style/Cart.css"

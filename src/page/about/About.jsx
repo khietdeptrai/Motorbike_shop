@@ -1,5 +1,3 @@
-
-
 import "./About.scss"
 
 function About() {
@@ -43,9 +41,6 @@ function About() {
                     <p className="desc">Nhanh, nhanh hơn, nhanh hơn nữa.</p>
 
                 </li>
-                
-         
-
             </ul>
         </div>
     </div> );

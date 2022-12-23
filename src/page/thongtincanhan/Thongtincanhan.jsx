@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import userService from "../../service/user.service";
 
 function Thongtincanhan() {
