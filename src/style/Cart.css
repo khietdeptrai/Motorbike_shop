@@ -1,0 +1,32 @@
+b {
+    font-size: 20px;
+}
+.content {
+    font-size: 20px;
+    text-align: left;
+}
+.btn-subtract{
+    width: 50px;
+    height: 50px;
+    
+}
+.btn-add{
+    width: 50px;
+    height: 50px;
+    
+}
+.btn-remove{
+    height: 50px;
+}
+.clear-btn{
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    margin-top: 7px;
+}
+.checkout-btn{
+    width: 130px;
+    height: 60px;
+    font-size: 20px;
+    margin-top: 7px;
+}
