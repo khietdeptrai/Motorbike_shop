@@ -20,10 +20,14 @@ function Footer() {
         <div className='footer__ketnoi'>
         <h3 className='footer__ketnoi-title'>Kết nối với chúng tôi</h3>
         <div className='footer__ketnoi--icons'>
-                 <i class="fa fa-facebook"></i>
-                 <i class="fa fa-instagram"></i>
-                 <i class="fa fa-google"></i>
-                 <i class="fa fa-twitter"></i>
+        <a id='no-line' href="https://www.facebook.com/Fine.Ph22/">
+                <i class="fa fa-facebook"></i></a>
+        <a id='no-line' href="https://www.instagram.com/taylorswift/">       
+                <i class="fa fa-instagram"></i></a>
+        <a id='no-line' href="https://www.facebook.com/Fine.Ph22/">          
+                <i class="fa fa-google"></i></a>
+        <a id='no-line' href="https://twitter.com/taylorswift13/">         
+                <i class="fa fa-twitter"></i></a>
         </div>
         </div>
     </div> );
