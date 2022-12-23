@@ -17,6 +17,8 @@ import authService from "../../service/user.service";
 
 import _ from "lodash";
 
+
+//Chua hien trang Checkout
 const style = {
   position: "absolute",
   top: "50%",
@@ -121,7 +123,7 @@ function Checkout() {
     setOpen(false);
     reset();
   };
-  //
+  //check out chua hien trang
   const { items, emptyCart, cartTotal } = useCart();
 
   return (
