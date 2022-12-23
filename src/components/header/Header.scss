@@ -5,7 +5,6 @@
     align-items: center;
     background-color: black;
     color: white;
-    padding: 0 32px;
     border-bottom: 2px solid white;
     .header__left {
         flex: 1;
@@ -19,12 +18,13 @@
         .header__mid-list {
             display: flex;
             list-style: none;
+            padding-top: 16px;
       
                 .header__mid-list__item {
-
                     font-size: 22px;
                     display: block;
-                    margin: 0 12px;
+               
+                    margin: 0 16px;
                     font-weight: 500;
                     text-decoration: none;
                     color: white;
@@ -38,15 +38,16 @@
     
                 }
                 .header__mid-list__item:hover {
-                    color: white;
-                    border-bottom: 2px solid white;
-    
-                    font-weight: 600;
+                    background-color: rgb(39, 61, 45);
+                    font-weight: 600px;
+                    padding: 0px 15px;
+                    border-radius: 5px;
                     cursor: pointer;
             
             }
             
         }
+    
     }
     .header__right {
         display: flex;
@@ -58,13 +59,14 @@
             font-size: 22px;
             color: white;
             border-radius: 50%;
-            padding: 4px;
+            
             
         }
         .fa-search:hover {
-            color: black;
-            background-color: white;
+            color: white;
+            background-color: rgb(39, 61, 45);
             font-weight: 600;
+            padding: 8px;
             cursor: pointer;
         }
         .user{
@@ -127,6 +129,7 @@
             border-radius: 16px;
             padding: 6px;
             color: white;
+            border-color: rgb(71, 71, 71);
 
             position: relative;
             .fa-shopping-bag {
@@ -134,8 +137,8 @@
             }
         }
         .header__right-btn:hover {
-            color: black;
-            background-color: white;
+            color: rgb(244, 255, 245);
+            background-color:rgb(39, 61, 45);
             cursor: pointer;
         }
         .header__right-btn::after {
