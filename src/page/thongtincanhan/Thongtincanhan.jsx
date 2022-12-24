@@ -25,6 +25,7 @@ function Thongtincanhan() {
             <p className="profile-right--text">Role: <strong>{user.roles}</strong></p>
             <p className="profile-right--text">Phone:{"   Updating !"}</p>
             <p className="profile-right--text">Address: {"   Updating !"}</p>
+
           </div>
         </div>
       ) : (
