@@ -7,7 +7,7 @@ function Thongtincanhan() {
 
     return ( <div>
 
-    <h1>Thong tin ca nhan</h1>
+    <h1>Personal Information</h1>
 
     </div> );
     
