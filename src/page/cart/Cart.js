@@ -22,7 +22,11 @@ function Cart() {
       const tocheckout =() => 
       { Navigate("/checkout")}
 
-	if (isEmpty) return <h5 className="text-center" >Cart is Empty </h5>
+	if (isEmpty) return <div className="body-cart">
+      <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+      <h5 className="text-center cart-empty" >
+    Giỏ hàng của bạn đang trống, hãy mua thêm gì đó để chúng tôi vui đi! </h5>
+    </div>
   return (
     <>
     <section className="py-4 container">

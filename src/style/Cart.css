@@ -30,3 +30,21 @@ b {
     font-size: 20px;
     margin-top: 7px;
 }
+.body-cart {
+    min-height: 550px;
+    margin-top: 57px;
+}
+.cart-empty {
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+i.fa.fa-cart-arrow-down {
+    font-size: 5rem;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px ;
+}
+section {
+    min-height: 607px;
+    font-family: "Roboto","HelveticaNeue","Helvetica Neue",sans-serif;
+}

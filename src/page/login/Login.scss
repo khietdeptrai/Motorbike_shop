@@ -17,6 +17,8 @@
             width: 40%;
             padding: 20px;
             background-color: white;
+            border-radius: 10px;
+            box-shadow:  0 0 10px rgb(118, 131, 121);
     
             .title {
                 font-size: 24px;
@@ -32,6 +34,9 @@
                     min-width: 40%;
                     margin: 10px 0;
                     padding: 10px;
+                }
+                .input:hover{
+                    border-color: #0b554e;
                 }
                 .button {
                     width: 40%;
