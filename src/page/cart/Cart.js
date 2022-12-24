@@ -25,7 +25,7 @@ function Cart() {
 	if (isEmpty) return <div className="body-cart">
       <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
       <h5 className="text-center cart-empty" >
-    Giỏ hàng của bạn đang trống, hãy mua thêm gì đó để chúng tôi vui đi! </h5>
+    Your shopping cart is empty, please buy something to make us happy! </h5>
     </div>
   return (
     <>
