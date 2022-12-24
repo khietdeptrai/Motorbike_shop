@@ -33,6 +33,8 @@ b {
 .body-cart {
     min-height: 550px;
     margin-top: 57px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    user-select: none;          /* Likely future */
 }
 .cart-empty {
     font-size: 1.4rem;
@@ -47,4 +49,10 @@ i.fa.fa-cart-arrow-down {
 section {
     min-height: 607px;
     font-family: "Roboto","HelveticaNeue","Helvetica Neue",sans-serif;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    user-select: none;          /* Likely future */
+}
+
+.spacer {
+    margin-bottom: 20px;
 }

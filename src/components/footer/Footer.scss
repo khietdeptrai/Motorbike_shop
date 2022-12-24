@@ -8,6 +8,11 @@
     padding-top: 50px;
     justify-content: space-between;
     border-top: 2px solid white;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+
     .footer__logo {
 
         .footer__logo-img {
