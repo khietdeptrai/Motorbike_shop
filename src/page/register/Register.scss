@@ -12,6 +12,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        user-select: none;          /* Likely future */
     
         .wrapper{
             width: 40%;

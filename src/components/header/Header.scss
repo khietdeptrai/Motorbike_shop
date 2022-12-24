@@ -7,6 +7,11 @@
     background-color: black;
     color: white;
     border-bottom: 2px solid white;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    
     .header__left {
         flex: 1;
 

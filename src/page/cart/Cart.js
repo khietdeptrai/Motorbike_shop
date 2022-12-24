@@ -34,7 +34,7 @@ function Cart() {
         {/* {console.warn(items)} */}
         <div className="col-12">
           <h3 className="title-total-items"> Total Items: {totalItems} </h3>
-          <br></br>
+          <div className='spacer'></div>
           <table className="table table-light- table-hover m-0">
             <tbody>
               <tr>
@@ -80,8 +80,7 @@ function Cart() {
           </table>
         </div>
         <hr/>
-        <br/>
-        <br/>
+        <div className='spacer'></div>
         <div className="col-auto ms-auto">
           <h3>Total Price: VND {cartTotal}</h3>
         </div>
