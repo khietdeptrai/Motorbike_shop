@@ -32,16 +32,19 @@ b {
 }
 .body-cart {
     min-height: 550px;
-    margin-top: 60px;
+    margin-top: 57px;
 }
 .cart-empty {
-    font-size: 1.6em;
+    font-size: 1.4rem;
+    margin-top: 10px;
 }
 i.fa.fa-cart-arrow-down {
     font-size: 5rem;
     display: block;
     text-align: center;
+    padding-bottom: 20px ;
 }
 section {
-    min-height: 610px;
+    min-height: 607px;
+    font-family: "Roboto","HelveticaNeue","Helvetica Neue",sans-serif;
 }
