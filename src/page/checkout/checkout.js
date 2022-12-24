@@ -32,8 +32,11 @@ const style = {
 };
 
 function Checkout() {
-  let Navigate = useNavigate();
+
+  const Navigate = useNavigate();
   const [message, setMessage] = useState("");
+
+
   const {
     register,
     handleSubmit,
@@ -41,17 +44,16 @@ function Checkout() {
     reset,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
+
   const [error, setError] = useState([]);
 
   ////
   const [open, setOpen] = useState(false);
   ///
   const [data, setData] = useState({ user: {} });
-  useEffect(() => {
-    authService.getUser().then((res) => {
-      setData(res.data);
-    });
-  }, []);
+
+
+
   ////
   const onUpdata = (dataupdate) => {
     const firstname = dataupdate.firstname;
@@ -107,18 +109,8 @@ function Checkout() {
   };
   //
   const [data1, setData1] = useState({ user: {} });
-  const handleOpen = (user) => {
-    setOpen(true);
-    setData1(user);
-    if (data1 && !_.isEmpty(data1)) {
-      setValue = () => [
-        { firstname: data1.firstname },
-        { lastname: data1.lastname },
-        { contact: data1.contact },
-        { address: data1.address },
-      ];
-    }
-  };
+
+
   const handleClose = () => {
     setOpen(false);
     reset();
@@ -138,111 +130,7 @@ function Checkout() {
             </div>
           </div>
           <div className="" class="col-lg-20">
-            <div class="card">
-              {data && (
-                <address className="fs-5 text-danger">Shipping Address</address>
-              )}
-              <br />
-              <div className="row">
-                <div className="font-weight-bold col-sm fs-5">
-                  {data.user.firstname}
-                  {data.user.lastname} {data.user.contact}
-                </div>
-                <div className="col-sm-4 fs-5">{data.user.address}</div>
-                <div class=" col-sm-4 fs-5"> Default</div>
-                <Button className="col-sm" onClick={()=>handleOpen(data.user)}>
-                  Update
-                </Button>
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <form
-                    onSubmit={handleSubmit(onUpdata)}
-                    className="form-register"
-                  >
-                    {/* name */}
-                    <label htmlFor="name"> lastname</label>
-                    <input
-                    defaultValue={data1.lastname}
-                      name="lastname"
-                      type="text"
-                      {...register("lastname", {
-                        required: "Last name is required",
-                      })}
-                    ></input>
-                    {errors.name && (
-                      <small className="notion-text">
-                        {" "}
-                        {errors.name.message}
-                      </small>
-                    )}
-                    {/** */}
-                    <label htmlFor="name"> firstname</label>
-                    <input
-                      defaultValue={data1.firstname}
-                      name="firstname"
-                      type="text"
-                      {...register("firstname", {
-                        required: "First name is required",
-                      })}
-                    ></input>
-                    {errors.name && (
-                      <small className="notion-text">
-                        {" "}
-                        {errors.name.message}
-                      </small>
-                    )}
-                    {/*Contact*/}
-                    <label htmlFor="name"> contact</label>
-                    <input
-                    defaultValue={data1.contact}
-                      name="contact"
-                      type="text"
-                      {...register("contact", {
-                        required: "contact name is required",
-                      })}
-                    ></input>
-                    {errors.name && (
-                      <small className="notion-text">
-                        {" "}
-                        {errors.name.message}
-                      </small>
-                    )}
-                    {/*Address*/}
-                    <label htmlFor="name"> address</label>
-                    <input
-                    defaultValue={data1.address}
-                      name="address"
-                      type="text"
-                      {...register("address", {
-                        required: "address name is required",
-                      })}
-                    ></input>
-                    {errors.name && (
-                      <small className="notion-text">
-                        {" "}
-                        {errors.name.message}
-                      </small>
-                    )}
-                    <div className="row">
-                      <Button className="col-sm" type="submit" color="primary">
-                        Save
-                      </Button>
-                      <Button
-                        className="col-sm"
-                        color="secondary"
-                        onClick={handleClose}
-                      >
-                        Cancel
-                      </Button>
-                    </div>
-                  </form>
-                </Modal>
-              </div>
-            </div>
+
 
             <table className="table table-light- m-1 table-sm">
               <tbody>
@@ -288,7 +176,9 @@ function Checkout() {
                           alt=""
                         ></img>
                       </td>
-                      <td className="content">{item.name}</td>
+
+                      <td className="content">{item.title}</td>
+
                       <td className="content">{item.price}</td>
                       <td className="content">{item.quantity}</td>
                       <td className="content">{item.quantity * item.price}</td>
@@ -302,39 +192,38 @@ function Checkout() {
 
             <div class="card bg-light">
               <div class="row">
-                <div class="col-xl-9 fs-5">Payment Method</div>
+
+                <div class="col-xl-9 fs-5"></div>
                 <div class="col-sm fs-5">Cash on Delivery</div>
                 <div class="row">
                   <div class="col-xl-8"></div>
-                  <div class="col-sm-3 fs-5">Merchandise Subtotal:</div>
-                  <div class="col-sm fs-5">${cartTotal}</div>
+                  <div class="col-sm-3 fs-5">Total price: {cartTotal} VND</div>
                 </div>
                 <div class="row ">
                   <div class="col-xl-8"></div>
-                  <div class="col-sm-3 fs-5">Shipping Total:</div>
-                  <div class="col-sm fs-5">$160</div>
+                  <div class="col-sm-3 fs-5">Shipping Total: 2000000 VND</div>
                 </div>
                 <div className="row">
                   <div class="col-xl-8"></div>
-                  <div class="col-sm-3 fs-5">Total Payment:</div>
-                  <div class="col-sm fs-5">${cartTotal + 160}</div>
+                  <div class="col-sm-3 fs-5">Total Payment: {cartTotal + 2000000} VND</div>
+
                 </div>
               </div>
 
               <div className="row ">
                 <div className=" col-sm m-2 d-inline">
-                <a className=''> By clicking "Place Order", you are agreeing to</a>
-              <a className="" href="https://help.shopee.vn/portal/article/77242">
-                   Jewellery's
-                  General Transaction Terms
-                </a>
+
+                
+
                 </div>
                 <button
                   class=" col-sm-3 btn btn-primary m-2"
                   type="submit"
                   onClick={() => onSubmit(items)}
                 >
-                  Place Order
+
+                  Order
+
                 </button>
               </div>
             </div>
