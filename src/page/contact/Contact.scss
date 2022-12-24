@@ -1,33 +1,50 @@
 .contact {
+    .spacer {
+        margin-top: 40px;
+      }
+      
     .contact-form {
+        
         width: 500px;
+        min-height: 100px;
         margin: 50px auto;
-        text-align: center;
-        box-shadow:  0 0 10px #ccc;
-        padding: 50px 0 50px 0;
+        border-radius: 10px;
+        box-shadow:  0 0 10px rgb(118, 131, 121);
+        padding: 32px 24px;
         .title{
             margin: 0;
             padding: 0;
+            font-size: 2.1rem;
+            font-weight: 700;
+            text-align: center;
+            color: rgb(8, 92, 64);
         }
         .input-box {
 
             .text {
-                font-size: 24px;
-                opacity: .7;
-                margin-bottom: 10px;
+                opacity: .8;
+                font-weight: 640;
+                line-height: 1.8rem;
+                font-size: 1.4rem;
+                margin: 0;
             }
-            input {
-                width: 50%;
-                font-size: 20px;
-                border: none;
+            .box {
+                height: 48px;
+                width: 100%;
+                padding: 8px 16px;
+                border: 1px solid #b3b3b3;
+                border-radius: 3px;
                 outline: none;
-                border-bottom: 1px solid #ccc;
-                text-align: center;
+                font-size: 1.4rem;
+                margin: 4px 0px 12px;
+            }
+            .box:hover {
+                border-color: #0b554e;
             }
             .message {
-                width: 70%;
-
+                height: 96px;
             }
+            
 
         }
 
@@ -35,16 +52,26 @@
             margin-top: 50px;
             
             .btn {
-                width: 50%;
-                  margin: 0 auto;
-                  padding: 6px 0;
-                font-size: 26px;
+                display: flex;
+                align-items: center;
+                background-color: #053833;
+                margin-top: 12px;
+                padding: 0 64px;
                 font-weight: 600;
-                background-color: white;
+                color: #fff;
+                border: none;
+                width: 35%;
+                font-size: 18px;
+                border-radius: 8px;
+                text-align: center;
+                p {
+                    align-items: center;
+                    
+                }
 
                 &:hover {
                     cursor: pointer;
-                    background-color: black;
+                    background-color: rgb(91, 168, 132);
                     color: white;
                 }
 

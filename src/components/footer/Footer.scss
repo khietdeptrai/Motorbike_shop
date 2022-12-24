@@ -3,7 +3,7 @@
     background-color: #131414;
     color: white;
     display: flex;
-    padding: 0 10%;
+    padding: 0 5%;
     padding-top: 50px;
     justify-content: space-between;
     border-top: 2px solid white;
@@ -55,5 +55,9 @@
 
             }
         }
+    }
+    #no-line {
+        text-decoration: none;
+        color: white;
     }
 }

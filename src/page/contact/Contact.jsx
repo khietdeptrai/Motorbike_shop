@@ -1,34 +1,39 @@
 
+
 import "./Contact.scss"
+
 function Contact() {
     return ( <div className="contact">
         
         <form className="contact-form">
-        <h1 className="title">Contact Us</h1>
+        <h1 className="title">Liên hệ & Góp ý</h1>
+
+        <div class="spacer"></div>
+        
         <div className="input-box">
-            <p className="text">
-                Full Name
-            </p>
-            <input type="text" className="name" placeholder="Name" required/>
+            <p className="text">Tên đầy đủ</p>
+            <input type="text" className="box" name="name" placeholder="VD: Lê Phương" required/>
         </div>
         <div className="input-box">
             <p className="text">
             Phone Number
             </p>
-            <input type="text" className="phone" placeholder="Phone" required/>
+            <input type="text" className="box" name="phone" placeholder="0***" required/>
         </div>
         <div className="input-box">
             <p className="text">
             Email
             </p>
-            <input type="text" className="email" placeholder="Email" required/>
+            <input type="text" className="box" name="email" placeholder="VD: email@domain.com" required/>
         </div>
         <div className="input-box">
             <p className="text">
             Message
             </p>
-            <input type="text" className="message" placeholder="Message" required/>
+            <input type="text" className="box message" name="message" placeholder="message..." required/>
+            <span className="textmessage"></span>
         </div>
+        
 
         <div className="submit-box">
             <button className="btn">Gửi</button>
