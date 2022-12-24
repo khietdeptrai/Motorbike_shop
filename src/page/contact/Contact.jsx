@@ -30,7 +30,7 @@ function Contact() {
             <p className="text">
             Message
             </p>
-            <input type="text" className="box message" name="message" placeholder="message..." required/>
+            <textarea type="text" className="box message" name="message" placeholder="message..." required/>
             <span className="textmessage"></span>
         </div>
         
