@@ -32,8 +32,10 @@ const style = {
 };
 
 function Checkout() {
+
   const Navigate = useNavigate();
   const [message, setMessage] = useState("");
+
 
   const {
     register,
@@ -49,6 +51,8 @@ function Checkout() {
   const [open, setOpen] = useState(false);
   ///
   const [data, setData] = useState({ user: {} });
+
+
 
   ////
   const onUpdata = (dataupdate) => {
@@ -105,6 +109,8 @@ function Checkout() {
   };
   //
   const [data1, setData1] = useState({ user: {} });
+
+
   const handleClose = () => {
     setOpen(false);
     reset();
@@ -124,7 +130,7 @@ function Checkout() {
             </div>
           </div>
           <div className="" class="col-lg-20">
-           
+
 
             <table className="table table-light- m-1 table-sm">
               <tbody>
@@ -170,7 +176,9 @@ function Checkout() {
                           alt=""
                         ></img>
                       </td>
+
                       <td className="content">{item.title}</td>
+
                       <td className="content">{item.price}</td>
                       <td className="content">{item.quantity}</td>
                       <td className="content">{item.quantity * item.price}</td>
@@ -184,6 +192,7 @@ function Checkout() {
 
             <div class="card bg-light">
               <div class="row">
+
                 <div class="col-xl-9 fs-5"></div>
                 <div class="col-sm fs-5">Cash on Delivery</div>
                 <div class="row">
@@ -197,19 +206,24 @@ function Checkout() {
                 <div className="row">
                   <div class="col-xl-8"></div>
                   <div class="col-sm-3 fs-5">Total Payment: {cartTotal + 2000000} VND</div>
+
                 </div>
               </div>
 
               <div className="row ">
                 <div className=" col-sm m-2 d-inline">
+
                 
+
                 </div>
                 <button
                   class=" col-sm-3 btn btn-primary m-2"
                   type="submit"
                   onClick={() => onSubmit(items)}
                 >
+
                   Order
+
                 </button>
               </div>
             </div>

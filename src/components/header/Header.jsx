@@ -53,25 +53,25 @@ function Header() {
           <li className="header__mid-list__item">
             {" "}
             <Link className="header__mid-list__item-link" to="/homepage">
-              Trang chủ
+              Home
             </Link>
           </li>
           <li className="header__mid-list__item">
             {" "}
             <Link className="header__mid-list__item-link" to="/about">
-              Giới thiệu
+              Introduction
             </Link>
           </li>
           <li className="header__mid-list__item">
             {" "}
             <Link className="header__mid-list__item-link" to="/shopping">
-              Cửa hàng
+              Store
             </Link>
           </li>
           <li className="header__mid-list__item">
             {" "}
             <Link className="header__mid-list__item-link" to="/contact">
-              Liên hệ
+              Contact
             </Link>
           </li>
         </ul>
@@ -83,25 +83,25 @@ function Header() {
             <i class="fa fa-user"></i>
 
             <ul className="user-list">
-              <li className="user-list--item"><Link className="item-link" to='/thongtincanhan'>Thông tin</Link></li>
-              <li className="user-list--item"><Link className="item-link">Đổi mật khẩu</Link></li>
+              <li className="user-list--item"><Link className="item-link" to='/thongtincanhan'>Information</Link></li>
+              <li className="user-list--item"><Link className="item-link">Change password</Link></li>
               {isAdmin ?<>
-                <li className="user-list--item"><Link className="item-link" to="/quanlykhachhang">Quản lý khách hàng</Link></li>
-              <li className="user-list--item"><Link className="item-link"  to="/quanlysanpham">Quản lý sản phẩm</Link></li>
+                <li className="user-list--item"><Link className="item-link" to="/quanlykhachhang">Manage customer</Link></li>
+              <li className="user-list--item"><Link className="item-link"  to="/quanlysanpham">Manage product</Link></li>
               </> : <></>}
               
-              <li className="user-list--item"><Link className="item-link">Cài đặt</Link></li>
-              <li className="user-list--item"><Link className="item-link" onClick={logOut}>Đăng xuất</Link></li>
+              <li className="user-list--item"><Link className="item-link">Settings</Link></li>
+              <li className="user-list--item"><Link className="item-link" onClick={logOut}>Sign out</Link></li>
             </ul>
           </div>
         ) : (
           <Link className="header__right-btn" to="/login">
-            Đăng nhập / Đăng ký
+            Sign in / Sign up
           </Link>
         )}
 
         <Link className="header__right-btn" to="/cart">
-          Giỏ hàng
+          Your cart
           <i class="fa fa-shopping-bag"></i>
         </Link>
       </div>

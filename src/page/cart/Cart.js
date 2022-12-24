@@ -1,11 +1,16 @@
 import React from 'react'
 import { useCart } from 'react-use-cart'
-import { Link, useHistory,useNavigate  } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, useNavigate  } from "react-router-dom";
 
 import "../../style/Cart.css"
 
 function Cart() {
-	const {	isEmpty,
+
+  let Navigate = useNavigate();
+
+	const {	
+      isEmpty,
 			totalUniqueItems,
 			items,
 			totalItems,
@@ -13,7 +18,15 @@ function Cart() {
 			updateItemQuantity,
 			removeItem,
 			emptyCart} = useCart();
-	if (isEmpty) return <h5 className="text-center" >Cart is Empty </h5>
+
+      const tocheckout =() => 
+      { Navigate("/checkout")}
+
+	if (isEmpty) return <div className="body-cart">
+      <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+      <h5 className="text-center cart-empty" >
+      Your shopping cart is empty, please buy something to make us happy! </h5>
+    </div>
   return (
     <>
     <section className="py-4 container">
@@ -21,7 +34,7 @@ function Cart() {
         {/* {console.warn(items)} */}
         <div className="col-12">
           <h3 className="title-total-items"> Total Items: {totalItems} </h3>
-          <br></br>
+          <div className='spacer'></div>
           <table className="table table-light- table-hover m-0">
             <tbody>
               <tr>
@@ -67,14 +80,13 @@ function Cart() {
           </table>
         </div>
         <hr/>
-        <br/>
-        <br/>
+        <div className='spacer'></div>
         <div className="col-auto ms-auto">
-          <h3>Total Price: VND {cartTotal}</h3>
+          <h3>Total Price:  {cartTotal} VND</h3>
         </div>
         <div className="col-auto ms-auto">
           <button className="clear-btn btn btn-warning m-4  w-40" onClick={() => emptyCart()}>Clear Cart</button>
-          <button className="checkout-btn btn btn-primary m-2">Check Out</button>
+          <button className="checkout-btn btn btn-primary m-2" onClick={() => tocheckout()}>Check Out</button>
         </div>
       </div>
     </section>
