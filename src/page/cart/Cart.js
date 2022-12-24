@@ -83,7 +83,7 @@ function Cart() {
         <br/>
         <br/>
         <div className="col-auto ms-auto">
-          <h3>Total Price: VND {cartTotal}</h3>
+          <h3>Total Price:  {cartTotal} VND</h3>
         </div>
         <div className="col-auto ms-auto">
           <button className="clear-btn btn btn-warning m-4  w-40" onClick={() => emptyCart()}>Clear Cart</button>
